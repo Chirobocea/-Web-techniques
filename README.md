@@ -1,6 +1,6 @@
 # Web-techniques
 
-This repo contains homeworks and projects from the Web Techniques course.
+This repo contains exams and projects from the Web Techniques course.
 
 It covers:
 * HTML
