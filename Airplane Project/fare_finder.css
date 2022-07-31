@@ -1,0 +1,165 @@
+body{
+    background-color: #E6E6E6;
+    margin: 0;
+    border: 0;
+    padding: 0;  
+}
+
+p{
+    margin: 0;
+}
+
+select, a{
+    background: none;
+    border: 0;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#media{
+    display: none;
+    position: absolute;
+    right: 50px;
+}
+
+nav{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #4991CC;
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+#logo{
+    padding: 10px;
+}
+
+#filters{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+#filters>*{
+    margin: 5px;
+}
+
+#search{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.search_box{
+    background: white;
+    width: 130px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    padding: 0px;
+    margin: 8px;
+}
+
+#search_button{
+    width: 80px;
+    height: 20px;
+    z-index: 120;
+    margin: 8px;
+    background-color: #4991CC;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #E6E6E6;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#search_button:hover{
+    background-color: #2488da;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#menu{
+    padding-right: 30px;
+    list-style: none;
+}
+
+#submenu{
+    visibility: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li:hover #submenu{
+    visibility: visible;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    position: relative;
+    top: 40px;
+    width: 80%;
+    height: 70vh;
+    border-collapse: collapse;
+}
+
+td, tr{
+    border: 3px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+td:hover{
+    background-color: white;
+}
+
+@media screen and (max-width: 644px){
+    #media{
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 644px){
+    .hide>*{
+        display: none;
+    }
+    .hide select, option{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 730px){
+    td:first-child{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px){
+    td:nth-child(2){
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px){
+    td, tr{
+        border: 1px solid #dddddd;
+
+        padding: 5px;
+    }
+}

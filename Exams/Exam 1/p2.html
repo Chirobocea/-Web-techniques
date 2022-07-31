@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <script>
+        window.onload = function () {
+            var l = ["c1", "c2", "c3", "c4", "c5"];
+            var d = new Date();
+            var N = Math.max(10, d.getMinutes());
+
+            for (let i = 0; i < N; i++) {
+                var par = document.createElement("p");
+                document.body.appendChild(par);
+                par.innerHTML = "Mihail";
+                var r = Math.floor(Math.random() * 5);
+                par.className = l[r];
+            }
+
+            document.body.onclick = function (ev) {
+                alert("Y: " + ev.pageY);
+            }
+
+            paragrafe = document.querySelectorAll('p');
+
+            for (let i = 0; i < paragrafe.length; i++) {
+                paragrafe[i].addEventListener("click", function (ev) {
+                    for (let j = 0; j < paragrafe.length; j++) {
+                        if (paragrafe[j].className == paragrafe[i].className)
+                            document.body.removeChild(paragrafe[j]);
+                    }
+                    ev.stopPropagation();
+                });
+            }
+        }
+    </script>
+    <style>
+        .c1 {
+            color: aqua;
+        }
+
+        .c2 {
+            color: red;
+        }
+
+        .c3 {
+            color: blue;
+        }
+
+        .c4 {
+            color: purple;
+        }
+
+        .c5 {
+            color: peru;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

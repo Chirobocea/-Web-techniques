@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+
+    <style>
+        @media screen and (min-width: 800px) {
+            body {
+                display: flex;
+                justify-content: center;
+            }
+
+            #container {
+                width: 500px;
+                height: 500px;
+                background-color: green;
+                border: 1px solid black;
+                display: grid;
+                grid-template-columns: auto auto auto auto auto;
+            }
+
+            .square {
+                height: 100%;
+            }
+
+            :nth-child(odd).square {
+                border: solid red;
+            }
+
+            :nth-child(even).square {
+                border: solid blue;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            #container {
+                width: 50%;
+            }
+
+            .square {
+                display: block;
+                width: 100%;
+            }
+
+            @keyframes a {
+                from {
+                    background-color: white;
+                }
+
+                to {
+                    background-color: yellow;
+                }
+            }
+
+            body {
+                animation-name: a;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="square">d</div>
+        <div class="square">d</div>
+        <div class="square">d</div>
+        <div class="square">d</div>
+        <div class="square">d</div>
+    </div>
+</body>
+
+</html>

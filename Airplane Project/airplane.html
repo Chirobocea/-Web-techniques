@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Airplane</title>
+    <link rel="stylesheet" href="airplane.css">
+    <script src="airplane.js"></script>
+</head>
+
+<body>
+    <header id="main_header">
+        <div class="center">
+            <div class="row_header">
+                <div class="header_left">
+                    <a href="airplane.html">
+                        <img src="logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="header_right">
+                    <a class="call_center" id="tel">+40 4030 30</a>
+                    <select id="language">
+                        <option value="en" >EN</option>
+                        <option value="ro" selected="true">RO</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav_menu">
+        <div>
+            <ul class="menu">
+                <a href="explore.html"><li>Explore</li></a>
+                <a href="fare_finder.html"><li>Fare finder</li></a>
+                <li>Information</li>
+            </ul>
+        </div>
+    </nav>
+
+    <form id="search_form" action="http://localhost:7000" method="GET" target="ifr">
+        <div class="center" id="search_div">
+            <header id="title">Flights</header>
+            <div id="search_container">
+                
+                <div id="filters">
+                    <select name="directie">
+                        <option value="dus-intors">Dus-intors</option>
+                        <option value="dus" selected="true">Doar dus</option>
+                    </select>
+                    <div>
+                        <p>O persoana</p>
+                    </div>
+                    <select name="tip">
+                        <option value="economic" selected="true">Economic</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+                <div class="clear"></div>
+                <div id="search">        
+                    <div class="search_division">
+                        <input class="search_box" type="text" id="from" name="from" placeholder="From" required>
+                        <input class="search_box" type="text" id="to" name="to" placeholder="To" required>    
+                    </div>
+                    <div class="search_division">
+                        <input class="search_box" type="date" name="d_start" name="start" required>
+                        <input class="search_box" type="date" name="d_end"  name="end" required>
+                    </div>
+                </div>
+                <button type="submit" id="search_button">Search</button>
+            </div>  
+        </div>
+        <img src="cover.png" id="cover">
+    </form>
+    
+    <section class="center">
+        <iframe name="ifr"></iframe>
+        <article class="main_info_flight">
+            <div class="flight">
+                <img src="roma.jpg">
+                <div>
+                    <h1>13:25-16:45</h1>
+                    <p>Austrian</p>
+                </div>
+                <div class="optional">
+                    <h1>4h 20min</h1>
+                    <p>OTP-FCO</p>
+                </div>
+                <div class="optional">
+                    <h1>O escala</h1>
+                    <p>1h 10min VIE</p>
+                </div>
+                <div class="optional">
+                    <h1>214kg CO2</h1>
+                    <p>+56% emisii</p>
+                </div>
+                <div>
+                    <h1>191 EUR</h1>
+                    <p>calatorie dus-intors</p>
+                </div>
+                <div class="more">
+                    <img src="more.png">
+                </div>
+            </div>
+
+        </article>
+        <article class="main_info_flight">
+            <div class="flight">
+                <img src="roma.jpg">
+                <div>
+                    <h1>13:25-16:45</h1>
+                    <p>Austrian</p>
+                </div>
+                <div class="optional">
+                    <h1>4h 20min</h1>
+                    <p>OTP-FCO</p>
+                </div>
+                <div class="optional">
+                    <h1>O escala</h1>
+                    <p>1h 10min VIE</p>
+                </div>
+                <div class="optional">
+                    <h1>214kg CO2</h1>
+                    <p>+56% emisii</p>
+                </div>
+                <div>
+                    <h1>191 EUR</h1>
+                    <p>calatorie dus-intors</p>
+                </div>
+                <div class="more">
+                    <img  class="dropDetails" src="more.png">
+                </div>
+            </div>
+
+        </article>
+        <article class="main_info_flight">
+            <div class="flight">
+                <img src="roma.jpg">
+                <div>
+                    <h1>13:25-16:45</h1>
+                    <p>Austrian</p>
+                </div>
+                <div class="optional">
+                    <h1>4h 20min</h1>
+                    <p>OTP-FCO</p>
+                </div>
+                <div class="optional">
+                    <h1>O escala</h1>
+                    <p>1h 10min VIE</p>
+                </div>
+                <div class="optional">
+                    <h1>214kg CO2</h1>
+                    <p>+56% emisii</p>
+                </div>
+                <div>
+                    <h1>191 EUR</h1>
+                    <p>calatorie dus-intors</p>
+                </div>
+                <div class="more">
+                    <img class="dropDetails" src="more.png">
+                </div>
+            </div>
+
+        </article>
+        <article class="main_info_flight">
+            <div class="flight">
+                <img src="roma.jpg">
+                <div>
+                    <h1>13:25-16:45</h1>
+                    <p>Austrian</p>
+                </div>
+                <div class="optional">
+                    <h1>4h 20min</h1>
+                    <p>OTP-FCO</p>
+                </div>
+                <div class="optional">
+                    <h1>O escala</h1>
+                    <p>1h 10min VIE</p>
+                </div>
+                <div class="optional">
+                    <h1>214kg CO2</h1>
+                    <p>+56% emisii</p>
+                </div>
+                <div>
+                    <h1>191 EUR</h1>
+                    <p>calatorie dus-intors</p>
+                </div>
+                <div class="more">
+                    <img class="dropDetails" src="more.png">
+                </div>
+            </div>
+
+        </article>
+        <article class="main_info_flight">
+            <div class="flight">
+                <img src="roma.jpg">
+                <div>
+                    <h1>13:25-16:45</h1>
+                    <p>Austrian</p>
+                </div>
+                <div class="optional">
+                    <h1>4h 20min</h1>
+                    <p>OTP-FCO</p>
+                </div>
+                <div class="optional">
+                    <h1>O escala</h1>
+                    <p>1h 10min VIE</p>
+                </div>
+                <div class="optional">
+                    <h1>214kg CO2</h1>
+                    <p>+56% emisii</p>
+                </div>
+                <div>
+                    <h1>191 EUR</h1>
+                    <p>calatorie dus-intors</p>
+                </div>
+                <div class="more">
+                    <img class="dropDetails" src="more.png">
+                </div>
+            </div>
+
+        </article>
+        <article class="main_info_flight">
+            <div class="flight">
+                <img src="roma.jpg">
+                <div>
+                    <h1>13:25-16:45</h1>
+                    <p>Austrian</p>
+                </div>
+                <div class="optional">
+                    <h1>4h 20min</h1>
+                    <p>OTP-FCO</p>
+                </div>
+                <div class="optional">
+                    <h1>O escala</h1>
+                    <p>1h 10min VIE</p>
+                </div>
+                <div class="optional">
+                    <h1>214kg CO2</h1>
+                    <p>+56% emisii</p>
+                </div>
+                <div>
+                    <h1>191 EUR</h1>
+                    <p>calatorie dus-intors</p>
+                </div>
+                <div class="more">
+                    <img class="dropDetails" src="more.png">
+                </div>
+            </div>
+
+        </article>  
+        <article class="main_info_flight">
+            <div class="flight">
+                <img src="roma.jpg">
+                <div>
+                    <h1>13:25-16:45</h1>
+                    <p>Austrian</p>
+                </div>
+                <div class="optional">
+                    <h1>4h 20min</h1>
+                    <p>OTP-FCO</p>
+                </div>
+                <div class="optional">
+                    <h1>O escala</h1>
+                    <p>1h 10min VIE</p>
+                </div>
+                <div class="optional">
+                    <h1>214kg CO2</h1>
+                    <p>+56% emisii</p>
+                </div>
+                <div>
+                    <h1>191 EUR</h1>
+                    <p>calatorie dus-intors</p>
+                </div>
+                <div class="more">
+                    <img class="dropDetails" src="more.png">
+                </div>
+            </div>
+
+        </article>
+
+    </section>
+
+    <footer>
+        <p>© Mihail Chirobocea</p>
+    </footer>
+</body>
+
+</html>

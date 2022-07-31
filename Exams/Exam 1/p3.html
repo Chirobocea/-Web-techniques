@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <script>
+        window.onload = function () {
+
+            var d = new Date()
+            var inp = document.getElementById("date")
+            inp.value = d
+
+            var sel = document.querySelector("select")
+
+            if (localStorage.getItem("color"))
+                sel.value = localStorage.getItem("color")
+
+            inp.style.color = sel.value
+
+            var o = sel.options
+
+            var t = setInterval(function () {
+                sel.selectedIndex++
+                if (sel.selectedIndex < 0)
+                    sel.selectedIndex = 0;
+                inp.style.color = o[sel.selectedIndex].value
+
+            }, 3000)
+
+            window.addEventListener("keypress", function (ev) {
+                var x = ev.key
+                if (x == "s") {
+                    this.clearInterval(t)
+                    this.localStorage.setItem("color", sel.value)
+                }
+            })
+
+        }
+    </script>
+</head>
+
+<body>
+    <input id="date">
+    <select>
+        <option value="red" selected="true">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+    </select>
+</body>
+
+</html>
